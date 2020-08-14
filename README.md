@@ -28,6 +28,14 @@ by using `yarn`:
 $ yarn add react-ityped
 ```
 
+## ⚜️ How does react-ityped looks like?
+
+<br/>
+
+![](https://raw.githubusercontent.com/enesusta/assets-host-for-github-pages/assets/ityped/react-ityped-1.gif)
+
+
+
 ## ☕️ Features
 
 Original ityped package already has support for React applications. But it uses DOM directly with html-id.
@@ -124,12 +132,6 @@ If you want to check more detail about styling, check that [link](https://github
     margin-top: 3%;
 }
 ```
-
-## ⚜️ How does react-ityped looks like?
-
-<br/>
-
-![](https://raw.githubusercontent.com/enesusta/assets-host-for-github-pages/assets/ityped/react-ityped-1.gif)
 
 
 
