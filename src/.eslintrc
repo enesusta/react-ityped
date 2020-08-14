@@ -1,0 +1,10 @@
+{
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "semi": [
+      "always"
+    ]
+  }
+}
