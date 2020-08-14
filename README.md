@@ -13,6 +13,8 @@
 
 </div>
 
+
+
 ## 🕺 Install
 
 by using `npm`:
@@ -28,8 +30,34 @@ $ yarn add react-ityped
 
 ## ☕️ Features
 
+Original ityped package already has support for React applications. But it uses DOM directly with html-id.
 
+This situation might be appropriate for react applications `that doesn't use Reach Hook API.` But if you're using react **v16.8 or higher**, you should use `useRef` hook instead of direct DOM access.
 
+What do I mean?
+
+> This example has taken from ityped package.
+
+If you want to check. [link](https://github.com/luisvinicius167/ityped#use-with-reactjs)
+
+```jsx
+import React, { Component } from 'react'
+import { init } from 'ityped'
+
+export default class Hello extends Component {
+    componentDidMount() {
+        const myElement = document.querySelector('#myElement')
+        init(myElement, { showCursor: false, strings: ['Use with React.js!', 'Yeah!'] })
+    }
+    render() {
+        return <div id="myElement"></div>
+    }
+}
+```
+
+With `useRef()` hook, we don't require to specify any id on our component. `useRef()` hook does it for us.
+
+In this regards `react-ityped` uses **useRef()** hook to access native DOM element.
 
 ## 🎆 Example
 
@@ -60,7 +88,7 @@ export default Example;
 If you want to check more detail about styling, check that [link](https://github.com/luisvinicius167/ityped#css)
 
 ```css
-// index.css
+// index.
 .ityped-cursor {
     font-size: 2.2rem;
     opacity: 1;
@@ -119,7 +147,7 @@ Common props you may want to specify include:
 | startDelay | number | Time before typing starts | 50 |
 | backDelay | number | Time before backspacing | 500 |
 | loop | boolean | The animation loop | false |
-| placeholder | boolean | Write the string in the placeholder content | false |
+| showCursor | boolean | Show the cursor element | true |
 | disableBackTyping | boolean | Disable back typing for the last string sentence | false |
 
 <br/>
@@ -128,12 +156,12 @@ See the [props documentation](https://github.com/luisvinicius167/ityped#customiz
 
 
 
-## Build 
+## 📦 Build 
 
 - [Rollup](https://rollupjs.org/) for build process
 - [Babel](https://babeljs.io/) for transpilation
 
 
-## License
+## 📜 License
 
 MIT © [Enes Usta](https://github.com/enesusta)
