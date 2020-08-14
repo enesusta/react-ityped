@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { init } from 'ityped';
 
-const ITyped = ({ cursor, typeSpeed, text }) => {
+const ITyped = ({ className, cursor, typeSpeed, text }) => {
     const ref = useRef(null);
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const ITyped = ({ cursor, typeSpeed, text }) => {
     }, []);
 
     return (
-        <div ref={ref}></div>
+        <div className={className} ref={ref}></div>
     );
 };
 
