@@ -28,7 +28,82 @@ $ yarn add react-ityped
 
 ## ☕️ Features
 
-ads
+
+
+
+## 🎆 Example
+
+```jsx
+import React from 'react';
+import ITyped from 'react-ityped';
+import './index.css';
+
+const Example = () => {
+
+    const strings = ['react-ityped', 'is a', 'react component', 'that wraps npm ityped package.']
+
+    return (
+        <ITyped className='container ityped-cursor'
+            showCursor={false}
+            strings={strings}
+            typeSpeed={50}
+            backSpeed={50}
+            startDelay={100}
+            backDelay={250}
+        />
+    );
+}
+
+export default Example;
+```
+
+If you want to check more detail about styling, check that [link](https://github.com/luisvinicius167/ityped#css)
+
+```css
+// index.css
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+.container {
+    text-align: left;
+    font-size: 25px;
+    align-self: center;
+    margin-left: 3%;
+    margin-top: 3%;
+}
+```
+
+## ⚜️ How does react-ityped looks like?
+
+<br/>
+
+![](https://raw.githubusercontent.com/enesusta/assets-host-for-github-pages/assets/ityped/react-ityped-1.gif)
+
+
 
 ## 🔧 Props
 
@@ -44,10 +119,8 @@ Common props you may want to specify include:
 | startDelay | number | Time before typing starts | 50 |
 | backDelay | number | Time before backspacing | 500 |
 | loop | boolean | The animation loop | false |
-| showCursor | boolean | Show the cursor element | true |
 | placeholder | boolean | Write the string in the placeholder content | false |
 | disableBackTyping | boolean | Disable back typing for the last string sentence | false |
-| | | |
 
 <br/>
 
