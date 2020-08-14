@@ -1,14 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 import { init } from 'ityped';
 
-const ITyped = ({ className, cursor, typeSpeed, text }) => {
+const ITyped = ({ className, strings, showCursor, typeSpeed,
+    backDelay, backSpeed, startDelay,
+    loop, placeholder, disableBackTyping, cursorChar }) => {
+
     const ref = useRef(null);
 
     useEffect(() => {
         init(ref.current, {
-            showCursor: cursor,
+            showCursor: showCursor,
             typeSpeed: typeSpeed,
-            strings: text
+            strings: strings,
+            backDelay: backDelay,
+            backSpeed: backSpeed,
+            startDelay: startDelay,
+            loop: loop,
+            disableBackTyping: disableBackTyping,
+            cursorChar: cursorChar,
+            placeholder: placeholder
         });
     }, []);
 

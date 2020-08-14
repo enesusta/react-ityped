@@ -7,7 +7,6 @@ example/node_modules
 # builds
 build
 dist
-readme.md
 
 # misc
 .DS_Store
